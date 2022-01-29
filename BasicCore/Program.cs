@@ -1,7 +1,7 @@
 ﻿using BasicCore;
 Console.WriteLine("Hello, Welcome to Basic-Core Programe...!");
 Console.WriteLine("What you want to do...:- Choose Option ");
-Console.WriteLine("1. FlipCoin \n2. Leapyear \n3. Table of power 2\n4. Harmonic Number\n 5. Exit");
+Console.WriteLine("1. FlipCoin \n2. Leapyear \n3. Table of power 2\n4. Harmonic Number\n 5. Prime Factor\n 6. Exit");
 int option = Convert.ToInt32(Console.ReadLine());
 bool flag= true;
 while (true)
@@ -27,6 +27,12 @@ while (true)
             harmonic.HarmonicNum();
             break;
         case 5:
+            Factor factor = new Factor();
+            Console.WriteLine("Enter a number :- ");
+            int num = Convert.ToInt32(Console.ReadLine());
+            factor.PrimFact(num);
+            break;
+        case 6:
             flag = false;
             break;
         default:
