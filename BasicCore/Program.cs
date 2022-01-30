@@ -1,7 +1,7 @@
 ﻿using BasicCore;
 Console.WriteLine("Hello, Welcome to Basic-Core Programe...!");
 Console.WriteLine("What you want to do...:- Choose Option ");
-Console.WriteLine("1. FlipCoin \n2. Leapyear \n3. Table of power 2\n4. Harmonic Number\n5. Prime Factor\n6. Quotient Remainder\n7.Swaping Number\n8. Check odd Even\n9. Exit");
+Console.WriteLine("1. FlipCoin \n2. Leapyear \n3. Table of power 2\n4. Harmonic Number\n5. Prime Factor\n6. Quotient Remainder\n7.Swaping Number\n8. Check odd Even\n9. Check Vowel or Cosonent\n10. Exit");
 int option = Convert.ToInt32(Console.ReadLine());
 bool flag= true;
 while (true)
@@ -12,44 +12,48 @@ while (true)
         case 1:
             FlipCoin flipcoin = new FlipCoin();
             flipcoin.Flip();
-            break;
+        break;
         case 2:
             LeapYeer leapyear = new LeapYeer();
             Console.WriteLine("Enter a year :- ");
             int yeer = Convert.ToInt32(Console.ReadLine());
             leapyear.Year(yeer);
-            break;
+        break;
         case 3:
             Table table = new Table();
             table.Power();
-            break;
+        break;
         case 4:
             Harmonic harmonic = new Harmonic();
             harmonic.HarmonicNum();
-            break;
+        break;
         case 5:
             Factor factor = new Factor();
             Console.WriteLine("Enter a number :- ");
             int num = Convert.ToInt32(Console.ReadLine());
             factor.PrimFact(num);
-            break;
+        break;
         case 6:
             Division division = new Division();
             division.QutRem();
-            break;
+        break;
         case 7:
             Swap swap = new Swap();
             swap.Swaping();
-            break;
+        break;
         case 8:
             OddEveen oddEveen = new OddEveen();
             oddEveen.OddEven();
-            break;
+        break;
         case 9:
-            flag = false;
+            Alphabet alphabet = new Alphabet();
+            alphabet.VowCon();
             break;
+        case 10:
+            flag = false;
+        break;
         default:
             Console.WriteLine("Choose correct option to Execute :-");
-            break;
+        break;
     }
 }
