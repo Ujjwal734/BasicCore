@@ -1,7 +1,8 @@
-﻿using BasicCore;
+﻿using System;
+using BasicCore;
 Console.WriteLine("Hello, Welcome to Basic-Core Programe...!");
 Console.WriteLine("What you want to do...:- Choose Option ");
-Console.WriteLine("1. FlipCoin \n2. Leapyear \n3. Table of power 2\n4. Harmonic Number\n5. Prime Factor\n6. Quotient Remainder\n7.Swaping Number\n8. Check odd Even\n9. Check Vowel or Cosonent\n10. Exit");
+Console.WriteLine("1. FlipCoin \n2. Leapyear \n3. Table of power 2\n4. Harmonic Number\n5. Prime Factor\n6. Quotient Remainder\n7. Swaping Number\n8. Check odd Even\n9. Check Vowel or Cosonent\n10. Check largest among Three number\n11. Exit");
 int option = Convert.ToInt32(Console.ReadLine());
 bool flag= true;
 while (true)
@@ -50,6 +51,10 @@ while (true)
             alphabet.VowCon();
             break;
         case 10:
+            Largest largest = new Largest();
+            largest.Large();
+            break;
+        case 11:
             flag = false;
         break;
         default:
